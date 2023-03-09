@@ -3,7 +3,8 @@ import P5Wrapper from '../components/P5Wrapper/P5Wrapper';
 import { drawRectangle, drawCircle } from '../sketchModules/shapes';
 import { randomColor } from '../sketchModules/utils';
 
-export const SketchOne = () => {
+export const Sketch = () => {
+  Sketch.id = 123
   const sketch = (p) => {
     p.setup = function() {
         p.createCanvas(400, 400);

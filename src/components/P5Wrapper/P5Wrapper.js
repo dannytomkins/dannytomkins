@@ -8,7 +8,10 @@ class P5Wrapper extends Component {
   }
 
   componentDidMount() {
-    this.canvas = new p5(this.props.sketch, this.wrapper);
+    console.log('P5Wrapper mounted');
+    if (!this.canvas) {
+      this.canvas = new p5(this.props.sketch, this.wrapper);
+    }
   }
 
   componentWillUnmount() {
