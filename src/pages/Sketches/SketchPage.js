@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
-import { Sketch } from '../../sketches/456'
-import P5Wrapper from '../../components/P5Wrapper/P5Wrapper';
+import { useParams } from 'react-router-dom';
+import { sketchData } from '../../data/sketchData';
 
-class SketchPage extends Component {
-  render() {
-    return (
-      <div>
-        <p>SketchPage</p>
-        <P5Wrapper sketch={Sketch.sketch} />
-      </div>
-    );
+function SketchPage() {
+  const { id } = useParams();
+  const sketchObject = sketchData.find(sketch => sketch.id === parseInt(id));
+  if (!sketchObject) {
+    return <p>Sketch not found.</p>;
   }
+
+  const SketchComponent = () => <sketchObject.sketch />;
+  
+  return (
+    <div>
+      <p>SketchPage</p>
+      <SketchComponent />
+    </div>
+  );
 }
 
 export default SketchPage;

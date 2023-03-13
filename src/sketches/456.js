@@ -1,7 +1,8 @@
 import React from 'react';
+import P5Wrapper from '../components/P5Wrapper/P5Wrapper';
 
-export const Sketch = {
-  sketch: (p) => {
+export const Sketch = () => {
+  const sketch = (p) => {
     let t;
     p.setup = () => {
       p.createCanvas(400, 400);
@@ -31,5 +32,12 @@ export const Sketch = {
         p.background(0);
       }
     };
-  }
+  };
+
+  return (
+    <div>
+      <p>SketchTwo</p>
+      <P5Wrapper sketch={sketch} />
+    </div>
+  );
 };
