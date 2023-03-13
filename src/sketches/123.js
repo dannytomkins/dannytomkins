@@ -20,7 +20,7 @@ export const Sketch = () => {
   return (
     <div>
       <p>SketchOne</p>
-      <P5Wrapper sketch={sketch} />
+      <P5Wrapper key={Date.now()} sketch={sketch} />
     </div>
   );
 };
