@@ -13,7 +13,7 @@ function SketchPage() {
   
   return (
     <div>
-      <p>SketchPage</p>
+      <p>SketchPage, Sketch{id}</p>
       <SketchComponent />
     </div>
   );

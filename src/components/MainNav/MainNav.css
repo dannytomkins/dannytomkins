@@ -1,0 +1,76 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2857A4;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .links {
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+  }
+  
+  .links a {
+    margin: 0 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+}
+
+    a:hover {
+        text-decoration: underline;
+        background-color: indigo;
+    }
+    a.active {
+        text-decoration: underline;
+        background-color: seagreen;
+
+    }
+  
+  .icon {
+    display: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #5B7DB4;
+    position: absolute;
+    padding: 10px;
+    top: 60px;
+    right: 20px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    margin: 10px 0;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+  }
+  
+  @media (max-width: 600px) {
+    .links {
+      display: none;
+    }
+  
+    .icon {
+      display: block;
+    }
+  }
+  
