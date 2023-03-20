@@ -19,8 +19,9 @@ export const Sketch = () => {
 
   return (
     <div>
-      <p>SketchOne</p>
+      <p>This is SketchOne</p>
       <P5Wrapper key={Date.now()} sketch={sketch} />
+      <p>This is after the sketch123</p>
     </div>
   );
 };

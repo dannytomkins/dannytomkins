@@ -1,4 +1,5 @@
 import React from 'react';
+import SketchesNav from './SketchesNav/SketchesNav';
 
 const Sketches = () => {
   return (
@@ -6,6 +7,8 @@ const Sketches = () => {
         <p>
           helo worl Sketches
         </p>
+        <SketchesNav />
+        
     </>
   );
 };

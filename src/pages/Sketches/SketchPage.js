@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SketchesNav from './SketchesNav/SketchesNav';
 import { useParams } from 'react-router-dom';
 import { sketchData } from '../../data/sketchData';
 
@@ -13,6 +14,7 @@ function SketchPage() {
   
   return (
     <div>
+      <SketchesNav />
       <p>SketchPage, Sketch{id}</p>
       <SketchComponent />
     </div>
