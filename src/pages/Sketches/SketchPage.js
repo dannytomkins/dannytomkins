@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SketchesNav from './SketchesNav/SketchesNav';
 import { useParams } from 'react-router-dom';
 import { sketchData } from '../../data/sketchData';
+import './SketchPage.css'
 
 function SketchPage() {
   const { id } = useParams();
@@ -13,9 +14,8 @@ function SketchPage() {
   const SketchComponent = () => <sketchObject.sketch />;
   
   return (
-    <div>
+    <div className="container">
       <SketchesNav />
-      <p>SketchPage, Sketch{id}</p>
       <SketchComponent />
     </div>
   );

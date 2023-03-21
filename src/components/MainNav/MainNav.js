@@ -11,13 +11,13 @@ const MainNav = () => {
 
   return (
     <nav className='navbar'>
-      <NavLink exact to='/' className='logo'>
+      <NavLink to='/' className='logo'>
         DANNY TOMKINS
       </NavLink>
 
       <div className='links'>
-        <NavLink exact to='/'>LANDING</NavLink>
-        <NavLink exact to='/sketches'>SKETCHES</NavLink>
+        <NavLink to='/'>LANDING</NavLink>
+        <NavLink to='/sketches'>SKETCHES</NavLink>
       </div>
 
       <div className="icon" onClick={handleToggle}>
@@ -25,8 +25,8 @@ const MainNav = () => {
       </div>
       {isOpen && (
         <div className="dropdown-content">
-        <NavLink exact to='/' onClick={handleToggle}>LANDING</NavLink>
-        <NavLink exact to='/sketches' onClick={handleToggle}>SKETCHES</NavLink>
+        <NavLink to='/' onClick={handleToggle}>LANDING</NavLink>
+        <NavLink to='/sketches' onClick={handleToggle}>SKETCHES</NavLink>
         </div>
       )}
     </nav>
