@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import MainNav from './components/MainNav/MainNav'
-import Landing from './pages/Landing/Landing';
-import Sketches from './pages/Sketches/Sketches';
-import SketchPage from './pages/Sketches/SketchPage'
+import Landing from './pages/landing/Landing';
+import PollenField from './pages/pollen_field/PollenField';
+import Sketches from './pages/sketches/Sketches';
+import SketchPage from './pages/sketches/SketchPage'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <MainNav />
         <Routes>
           <Route path='/' element={<Landing />} />
+          <Route path='/pollen_field' element={<PollenField />} />
           <Route path='/sketches' element={<Sketches />} />
           <Route path='/sketches/:id' element={<SketchPage />} />
         </Routes>
