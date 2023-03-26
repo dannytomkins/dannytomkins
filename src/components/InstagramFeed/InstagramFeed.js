@@ -1,3 +1,6 @@
+//@TODO implement multipost and carousel media
+//@TODO fetch more than 48 posts
+
 import React, { useState, useEffect } from 'react';
 
 function InstagramFeed(props) {
