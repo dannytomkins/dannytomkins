@@ -11,12 +11,12 @@ function SketchPage() {
     return <p>Sketch not found.</p>;
   }
 
-  const SketchComponent = () => <sketchObject.sketch />;
+  const SketchComponent = React.memo(() => <sketchObject.sketch />);
   
   return (
     <div className="container">
       <SketchesNav />
-      <SketchComponent />
+      <SketchComponent key={id}/>
     </div>
   );
 }

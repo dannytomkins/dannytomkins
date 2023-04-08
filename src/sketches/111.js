@@ -41,7 +41,8 @@ export const Sketch = () => {
 
   return (
     <div>
-      <P5Wrapper sketch={sketch} />
+      <p>111</p>
+      <P5Wrapper key={Math.random()} sketch={sketch} />
     </div>
   );
 };

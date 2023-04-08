@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import p5 from 'p5';
 
 class P5Wrapper extends Component {
-  constructor(props) {
-    super(props);
-    this.canvas = null;
-  }
+  static propTypes = {
+    sketch: PropTypes.func.isRequired,
+  };
 
   componentDidMount() {
     console.log('P5Wrapper componentDidMount');
-    if (!this.canvas) {
-      this.canvas = new p5(this.props.sketch, this.wrapper);
-    }
+    this.canvas = new p5(this.props.sketch, this.wrapper);
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     console.log('P5Wrapper componentDidUpdate');
-    if (this.canvas) {
+    if (this.props.sketch !== prevProps.sketch) {
       this.canvas.remove();
-      this.canvas = null;
+      this.canvas = new p5(this.props.sketch, this.wrapper);
     }
-    this.canvas = new p5(this.props.sketch, this.wrapper);
   }
 
   componentWillUnmount() {
@@ -30,6 +27,7 @@ class P5Wrapper extends Component {
       this.canvas = null;
     }
   }
+  
 
   render() {
     return <div ref={wrapper => this.wrapper = wrapper}></div>;
