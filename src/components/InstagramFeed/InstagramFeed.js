@@ -8,7 +8,6 @@ function InstagramFeed(props) {
 
   useEffect(() => {
     let accessToken = props.accessToken
-    console.log("accessToken:", accessToken);
     fetch(
       `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&access_token=${accessToken}&limit=48`
     )
