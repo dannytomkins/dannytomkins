@@ -1,16 +1,12 @@
 import React from 'react';
 import InstagramFeed from '../../components/InstagramFeed/InstagramFeed';
 import './PollenField.css'
-import { POLLEN_FIELD_TOKEN } from '../../config/config';
-
 
 const PollenField = () => {
   return (
     <>
-        <p>
-          helo worl pollen_field
-        </p>
-        <InstagramFeed accessToken={POLLEN_FIELD_TOKEN} />
+      <p>helo worl pollen_field page</p>
+      <InstagramFeed accessToken={process.env.REACT_APP_POLLEN_FIELD_TOKEN} />
     </>
   );
 };
