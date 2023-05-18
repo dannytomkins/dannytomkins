@@ -7,15 +7,27 @@ function InstagramFeed(props) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    let accessToken = props.accessToken
-    fetch(
-      `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&access_token=${accessToken}&limit=48`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setPosts(data.data);
-      });
+    const fetchInstagramData = async () => {
+      try {
+        const data = await fetchInstagramPosts(props.accessToken);
+        setPosts(data);
+      } catch (error) {
+        console.log("Error fetching Instagram data:", error);
+      }
+    };
+    fetchInstagramData();
   }, []);
+
+  const fetchInstagramPosts = async (accessToken, limit = 48) => {
+    const url = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&access_token=${accessToken}&limit=${limit}`;
+    const response = await fetch(url);
+    if (response.ok) {
+      const { data } = await response.json();
+      return data;
+    } else {
+      throw new Error('Network response was not ok');
+    }
+  };
 
   return (
     <div className="instagram-feed-container">
