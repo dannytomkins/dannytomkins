@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import p5 from 'p5';
+import 'p5/lib/addons/p5.sound';
 
 class P5Wrapper extends Component {
   static propTypes = {
