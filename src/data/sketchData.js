@@ -5,6 +5,7 @@ import { Sketch as Sketch1683455940 } from "../sketches/1683455940/1683455940";
 import { Sketch as Sketch1686478500 } from "../sketches/1686478500/1686478500";
 import { Sketch as Sketch1687083300 } from "../sketches/1687083300/1687083300";
 import { Sketch as Sketch1687688160 } from "../sketches/1687688160/1687688160";
+import { Sketch as Sketch1688898153 } from "../sketches/1688898153/1688898153";
 import { Sketch as Sketch456 } from "../sketches/456";
 import { Sketch as Sketch789 } from "../sketches/789";
 
@@ -50,6 +51,12 @@ export const sketchData = [
     name: "1687688160",
     description: "unown",
     sketch: Sketch1687688160,
+  },
+  {
+    id: 1688898153,
+    name: "1688898153",
+    description: "unown",
+    sketch: Sketch1688898153,
   },
   {
     id: 456,
