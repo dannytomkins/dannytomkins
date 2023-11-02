@@ -4,16 +4,18 @@ import { articleData } from '../../data/articleData';
 import './Landing.css'
 
 const Landing = () => {
+  const reversedArticleData = [...articleData].reverse();
+
   return (
     <>
         <h1>
-          helo worl Landing
+          hello world Landing
         </h1>
-        <container>
-        {articleData.map((article, index) => (
-        <ArticleItem key={index} article={article} />
+        <div className="container">
+        {reversedArticleData.map((article, index) => (
+          <ArticleItem key={index} article={article} />
         ))}
-        </container>
+        </div>
     </>
   );
 };
