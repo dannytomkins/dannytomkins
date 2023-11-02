@@ -8,9 +8,6 @@ const Landing = () => {
 
   return (
     <>
-        <h1>
-          hello world Landing
-        </h1>
         <div className="container">
         {reversedArticleData.map((article, index) => (
           <ArticleItem key={index} article={article} />

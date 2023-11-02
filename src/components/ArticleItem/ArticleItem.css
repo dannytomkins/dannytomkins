@@ -6,7 +6,7 @@
   max-width: 800px;
   margin: 25px;
   padding: 25px;
-  mix-blend-mode: difference;
+  mix-blend-mode: color-burn;
 }
 h2 {
   font-size: 30px;

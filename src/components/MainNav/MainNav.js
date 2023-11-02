@@ -17,7 +17,6 @@ const MainNav = () => {
 
       <div className='links'>
         <NavLink to='/'>LANDING</NavLink>
-        <NavLink to='/pollen_field'>pollen_field</NavLink>
       </div>
 
       <div className="icon" onClick={handleToggle}>
@@ -26,7 +25,6 @@ const MainNav = () => {
       {isOpen && (
         <div className="dropdown-content">
         <NavLink to='/' onClick={handleToggle}>LANDING</NavLink>
-        <NavLink to='/pollen_field' onClick={handleToggle}>pollen_field</NavLink>
         </div>
       )}
     </nav>
