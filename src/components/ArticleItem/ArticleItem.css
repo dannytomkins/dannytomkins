@@ -1,13 +1,64 @@
 .article {
-  border-style: solid;
-  border-width: 5px;
-  color: #aeb080;
-  background: rgba(174, 176, 128, 0.1);;
-  max-width: 800px;
-  margin: 25px;
-  padding: 25px;
-  mix-blend-mode: color-burn;
+  width: 600px;
+  max-width: 90vw;
+  height: 600px; /* Allow the article to take up the full height of the container */
+  /* min-height: 600px; */
+  /* position: relative; */
+  /* display: flex; */
+  /* background-size: cover; */
+  /* background-position: center; */
+  overflow: hidden; /* Ensure content doesn't overflow the height */
 }
-h2 {
-  font-size: 30px;
+
+.article :hover {
+  background-color: rgba(30, 30, 30, 0.7);
+  transition: all .5s ease-in-out;
+  mix-blend-mode: normal;
+}
+
+
+.text-overlay {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: difference; /* difference with white color type */
+  color: rgba(230, 230, 230);
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in width and height */
+  whitespace: pre-wrap;
+}
+
+.text-overlay h2 {
+  font-size: 3rem;
+}
+
+.text-overlay h5 {
+  font-size: 1rem;
+}
+
+.text-overlay p {
+}
+
+.text-overlay a:link {
+}
+
+/* unvisited link */
+.text-overlay a:link {
+  color: red;
+}
+
+/* visited link */
+.text-overlay a:visited {
+  color: green;
+}
+
+/* mouse over link */
+.text-overlay a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+.text-overlay a:active {
+  color: blue;
 }
