@@ -34,7 +34,7 @@ time, mark, audio, video {
 }
 
 body {
-  background-image: linear-gradient(140deg, rgba(174, 176, 128, 0.6), rgba(119, 89, 133, 0.6), rgba(119, 89, 133, 0.6));
+  background-image: linear-gradient(140deg, rgba(174, 176, 128, 0.4), rgba(119, 89, 133, 0.4), rgba(119, 89, 133, 0.4));
   margin: 0;
 	background-attachment: fixed;
 }
